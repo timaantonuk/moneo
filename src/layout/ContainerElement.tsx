@@ -14,7 +14,6 @@ const ContainerElement: React.FC<IContainerProps> = ({ children, ...boxProps }) 
             maxWidth="lg"
             sx={{
                 padding: 3,
-                backgroundColor: "red",
                 minHeight: "100vh",
                 height: "100%",
                 display: "flex",
@@ -26,8 +25,8 @@ const ContainerElement: React.FC<IContainerProps> = ({ children, ...boxProps }) 
                 component="section"
                 sx={{
                     padding: 5,
-                    backgroundColor: "var(--background-color)",
-                    height: "90vh",
+                    backgroundColor: (theme) => theme.palette.background.default,
+                    height: "85vh",
                     width: "100%",
                     borderRadius: 15,
                     ...boxProps.sx,

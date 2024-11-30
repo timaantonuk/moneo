@@ -8,11 +8,11 @@ const Home: React.FC = () => {
 
          <ContainerElement display={'flex'} flexDirection={'column'} justifyContent='space-between' alignItems='center'>
 
-             <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: `calc(var(--spacing)*2)`}}>
+             <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 3}}>
                  <Typography variant='h3'
                              sx={{
+                                 color: (theme) => theme.palette.text.primary,
                                  fontWeight: 500,
-                                 color: 'var(--text-primary)',
                                  fontSize: {
                                      md: '3rem',
                                      xs: '1.7rem'
