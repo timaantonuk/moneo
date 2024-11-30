@@ -18,7 +18,18 @@ export default function BottomNavigationElement() {
     return (
         <BottomNavigation sx={{ width: '80%', borderRadius: 5, backgroundColor: 'var(--accent-1)', color: 'green' }} value={value} onChange={handleChange}>
             <BottomNavigationAction
-                sx={{color: 'green'}}
+                sx={{
+                    color: 'green', // Default color
+                    '&:hover': {
+                        color: 'green', // Hover color
+                    },
+                    '&.Mui-selected': {
+                        color: 'green', // Active (selected) color
+                    },
+                }}
+                label="Recents"
+                value="recents"
+                icon={<RestoreIcon />}
                 label="Recents"
                 value="recents"
                 icon={<RestoreIcon />}
