@@ -1,7 +1,7 @@
 import React from "react";
 import {Avatar, Box, Chip, Typography} from "@mui/material";
 import ContainerElement from "../layout/ContainerElement.tsx";
-import {blue, green} from "@mui/material/colors";
+import {blue} from "@mui/material/colors";
 
 
 const Home: React.FC = () => {
