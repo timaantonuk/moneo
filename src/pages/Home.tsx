@@ -6,6 +6,7 @@ import Grid from "@mui/material/Grid2";
 import PieChartElem from "../components/PieChartElem.tsx";
 import LineChartElem from "../components/LineChartElem.tsx";
 import MoneyChip from "../components/MoneyChip.tsx";
+import BottomNavigationElement from "../layout/BottomNavigation.tsx";
 
 const Home: React.FC = () => {
   return (
