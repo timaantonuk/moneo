@@ -26,7 +26,6 @@ const ContainerElement: React.FC<IContainerProps> = ({ children, ...boxProps }) 
                 sx={{
                     padding: 5,
                     backgroundColor: (theme) => theme.palette.background.default,
-                    height: "85vh",
                     width: "100%",
                     borderRadius: 15,
                     ...boxProps.sx,

@@ -1,8 +1,11 @@
 import React from "react";
-import {Avatar, Box, Chip, Typography} from "@mui/material";
+import {Avatar, Box, Typography} from "@mui/material";
 import ContainerElement from "../layout/ContainerElement.tsx";
-import {blue} from "@mui/material/colors";
 
+import Grid from '@mui/material/Grid2';
+import PieChartElem from "../components/PieChartElem.tsx";
+import LineChartElem from "../components/LineChartElem.tsx";
+import MoneyChip from "../components/MoneyChip.tsx";
 
 const Home: React.FC = () => {
     return (
@@ -32,19 +35,31 @@ const Home: React.FC = () => {
 
             </Box>
 
+            <Grid container spacing={1} marginBlock={2} sx={{width: '100%'}}>
+                <Grid size={{xs: 12, md: 8}}
+                      sx={{backgroundColor: (theme) => theme.palette.background.paper, order: {xs: 2, md: 1}}}
+                      borderRadius={6}>
+                    <PieChartElem/>
+                </Grid>
+                <Grid size={{xs: 12, md: 4}}
+                      sx={{backgroundColor: (theme) => theme.palette.background.paper, order: {xs: 1, md: 2}}}
+                      borderRadius={6} display='flex' flexDirection='column' justifyContent='center' paddingBlock={2} alignItems='center'
+                      gap={1}>
 
-            <Box sx={{display: 'flex', flexDirection: 'column', backgroundColor: blue[700], padding: 3, borderRadius: 5}}>
-                <Typography
-                    variant='h6'
-                    sx={{
-                        color: (theme) => theme.palette.text.primary,
-                        fontWeight: 300,
-                        fontSize: {
-                            md: '1rem',
-                        }
-                    }}>Total Income:</Typography>
-                <Chip label='5000$' color="success" avatar={<Avatar src="/static/images/avatar/1.jpg"/>}/>
-            </Box>
+
+                    <MoneyChip/>
+                    <MoneyChip/>
+                    <MoneyChip/>
+
+
+                </Grid>
+
+                <Grid size={12} borderRadius={6}
+                      sx={{backgroundColor: (theme) => theme.palette.background.paper, order: {xs: 3, md: 3}}}>
+                    <LineChartElem/>
+                </Grid>
+            </Grid>
+
 
         </ContainerElement>
     );
